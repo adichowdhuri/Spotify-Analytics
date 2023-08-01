@@ -4,7 +4,7 @@ from spotipy.oauth2 import SpotifyOAuth
 import os
 from dotenv import load_dotenv
 
-custom_dotenv_path = r'Spotify-Analytics\evs.gitignore\var.env'
+custom_dotenv_path = "D:/Users/Biki/OneDrive/My Documents/var.env"
 
 load_dotenv(custom_dotenv_path)
 
