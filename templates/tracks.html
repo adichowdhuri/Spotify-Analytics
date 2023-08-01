@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Saved Tracks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-height: 80px;
+            max-width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Tracks</h1>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Album</th>
+        </tr>
+        {% for track in tracks %}
+        <tr>
+            <td><img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover"></td>
+            <td>{{ track.name }}</td>
+            <td>{{ track.artists[0].name }}</td>
+            <td>{{ track.album.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
